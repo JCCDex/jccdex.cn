@@ -3,12 +3,12 @@
     <ul v-if="isBigScreen" id="foot">
       <li>{{$t("message.foot.copyright")}}</li>
       <li>{{$t("message.foot.company")}}</li>
-      <li @click="goTo()">
+      <li @click="goTo()" class="">
         <span @click="goTo()" style="margin-right:0.3rem;">{{$t("message.foot.icpNumber")}}</span>
         <span @click="goTo('recordNumber')">{{$t("message.foot.recordNumber")}}</span>
       </li>
     </ul>
-    <div v-if="!isBigScreen" class="foot_mobile">
+    <div v-else class="foot_mobile">
       <div class="body">{{$t("message.foot.copyright")}}</div>
       <div class="body">{{$t("message.foot.company")}}</div>
       <div class="body">
@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     goTo(type = '') {
-      let url = 'https://beian.miit.gov.cn/'
+      let url = 'https://beian.miit.gov.cn'
       if (type === 'recordNumber') {
         url = 'http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=34019202000676'
       }
@@ -56,6 +56,7 @@ export default {
   color: #999999;
   font-size: 0.24rem;
   span {
+    user-select: none;
     cursor: pointer;
   }
 }
@@ -68,6 +69,8 @@ export default {
     font-family: PingFangSC-Regular, PingFang SC;
     font-weight: 400;
     padding: 0.05rem 0;
+    user-select: none;
+    cursor: pointer;
   }
 }
 </style>

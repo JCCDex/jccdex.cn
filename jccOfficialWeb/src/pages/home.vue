@@ -50,22 +50,22 @@
         <div class="one">
            <img :src="item.image" :style="getWidth(item)" />
         </div>
-        <div class="two" :class="item.isFirst?'':'addBorder'">
+        <div class="two" :class="item.isFirst?'' : 'addBorder'">
           <div class="image_div">
-           <img :src="item.isFirst?ringLogo:ring" class="img" />
+           <img :src="item.isFirst ? ringLogo : ring" class="img" />
          </div>
          {{$t(`message.home.${item.text}`)}}
         </div>
       </div>
     </div>
     <!-- 我们的合作机构 -->
-    <img :src="isEnglish?homeMiddle_en:homeMiddle"  class="img" />
+    <img :src="isEnglish ? homeMiddle_en : homeMiddle"  class="img" />
     <div class="journey">
       <div class="head">{{$t("message.home.journey")}}</div>
       <div class="body">
         <div class="one" v-for="item in journeyList" :key="item.id" @mousemove="setCurrentValue(item.name)" @mouseleave="currentValue='';">
           <div class="div_class">
-            <img :src="item.name===currentValue?item.image:item.image_com"  class="image" />
+            <img :src="item.name===currentValue ? item.image : item.image_com"  class="image" />
           </div>
         </div>
       </div>
