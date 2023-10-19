@@ -77,7 +77,8 @@
           <img :src="contactUs" class="img" />
       </div>
       <div class="body">
-          <div class="title">{{$t("message.home.address")}}</div>
+        <div class="title">{{$t("message.home.address")}}</div>
+        <!-- <div style="width:100%;display:flex;justify-content:space-between;"> -->
           <div class="one">
               <div class="iamge_class">
                 <img :src ="addressImage" class="img" />
@@ -114,6 +115,7 @@
                   </div>
                   <div class="foot">{{$t("message.home.qrFoot")}}</div>
           </div>
+        <!-- </div> -->
       </div>
     </div>
   </div>
@@ -369,15 +371,7 @@ export default {
         image: journeySeven,
         image_com: journeySeven_com
       }],
-      contactUsList: [{
-        id: 1,
-        name: "mobile",
-        text: "mobileText",
-        value: "mobileValue",
-        image: mobileImage,
-        width: "14px",
-        height: "18px"
-      },
+      contactUsList: [
       {
         id: 2,
         name: "email",
