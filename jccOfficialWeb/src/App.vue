@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <commonHead></commonHead>
-    <router-view/>
+    <router-view style="margin-top:1rem;"/>
     <commonFoot></commonFoot>
   </div>
 </template>
@@ -15,7 +15,7 @@ export default {
   created() {
     window.screenWidth = document.body.clientWidth;
     let screenWidth = window.screenWidth;
-    let isBigScreen = screenWidth >= 1000 ? true : false;
+    let isBigScreen = screenWidth >= 1024;
     this.$store.dispatch("updateIsBigScreen", isBigScreen);
   }
 };

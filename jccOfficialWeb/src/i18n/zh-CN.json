@@ -3,7 +3,8 @@
   "head": {
     "home": "首页",
     "cases": "应用案例",
-    "technology": "核心技术"
+    "technology": "核心技术",
+    "documents": "开发文档"
   },
   "foot": {
     "copyright": "版权所有 Copyright(C)2017-2020",
