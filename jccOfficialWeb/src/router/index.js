@@ -13,15 +13,20 @@ export default new Router({
       name: 'home',
       component: _import("home")
     },
-    {
-      path: '/technology',
-      name: 'technology',
-      component: _import("technology")
-    },
+    // {
+    //   path: '/technology',
+    //   name: 'technology',
+    //   component: _import("technology")
+    // },
     {
       path: '/cases',
       name: 'cases',
       component: _import("cases")
+    },
+    {
+      path: '/scheme',
+      name: 'scheme',
+      component: _import("scheme")
     }
   ]
 })

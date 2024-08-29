@@ -3,7 +3,7 @@
     <img :src="isEnglish?homeHead_en:homeHead"  class="img" />
     <!-- 井畅—区块链价值交换机 -->
     <div class="exchange">
-      <div class="head">{{$t("message.home.exchange")}}</div>
+      <!-- <div class="head">{{$t("message.home.exchange")}}</div> -->
       <div class="body">
         <div :span="8" v-for="item in exchangeList" :key="item.id" class="content">
          <div style="text-align:center;" >
@@ -17,7 +17,7 @@
       </div>
     </div>
     <!-- 公司简介 -->
-    <div class="profile">
+    <!-- <div class="profile">
       <div class="head">{{$t("message.home.profile")}}</div>
       <div class="content">
           <div class="one">
@@ -29,7 +29,7 @@
             <img :src="profileTwo" class="img" />
           </div>
       </div>
-    </div>
+    </div> -->
     <!-- 我们的优势 -->
     <div class="advantage">
       <div class="head">{{$t("message.home.advantage")}}</div>
@@ -47,8 +47,9 @@
     <div class="course">
       <div class="head">{{$t("message.home.course")}}</div>
       <div v-for="item in courseList" :key="item.id" class="body">
-        <div class="one">
-           <img :src="item.image" :style="getWidth(item)" />
+        <div class="one" :style="(isEnglish&&isBigScreen) ? 'padding-left:10%': ''">
+           <!-- <img :src="item.image" :style="getWidth(item)" /> -->
+            <span>{{ item.date }}</span>
         </div>
         <div class="two" :class="item.isFirst?'' : 'addBorder'">
           <div class="image_div">
@@ -144,6 +145,7 @@ import journeyFour from "images/journeyFour.png"
 import journeyFive from "images/journeyFive.png"
 import journeySix from "images/journeySix.png"
 import journeySeven from "images/journeySeven.png"
+import journeyEight from "images/journeyEight.png"
 import journeyOne_com from "images/journeyOne_com.png"
 import journeyTwo_com from "images/journeyTwo_com.png"
 import journeyThree_com from "images/journeyThree_com.png"
@@ -151,6 +153,7 @@ import journeyFour_com from "images/journeyFour_com.png"
 import journeyFive_com from "images/journeyFive_com.png"
 import journeySix_com from "images/journeySix_com.png"
 import journeySeven_com from "images/journeySeven_com.png"
+import journeyEight_com from "images/journeyEight_com.png"
 import contactUs from "images/contactUs.png"
 import addressImage from "images/addressImage.png"
 import mobileImage from "images/mobileImage.png"
@@ -236,8 +239,8 @@ export default {
         contentList: [
           "technologyOne",
           "technologyTwo",
-          "technologyThree",
-          "technologyFour"
+          // "technologyThree",
+          // "technologyFour"
         ]
       },
       {
@@ -248,7 +251,7 @@ export default {
           "professionalOne",
           "professionalTwo",
           "professionalThree",
-          "professionalFour"
+          // "professionalFour"
         ]
       },
       {
@@ -258,8 +261,8 @@ export default {
         contentList: [
           "resourcesOne",
           "resourcesTwo",
-          "resourcesThree",
-          "resourcesFour"
+          // "resourcesThree",
+          // "resourcesFour"
         ]
       },
       {
@@ -270,13 +273,96 @@ export default {
           "serviceOne",
           "serviceTwo",
           "serviceThree",
-          "serviceFour"
+          // "serviceFour"
         ]
       }],
-      courseList: [{
+      courseList: [
+      {
+        id: 16,
+        text: "courseSixteen",
+        // image: courseSixteen,
+        date: '2023年',
+        width_pc: "20%",
+        width_mobile: "40%",
+        isFirst: false
+      },
+      {
+        id: 15,
+        text: "courseFifteen",
+        // image: courseFifteen,
+        date: '2022年',
+        width_pc: "20%",
+        width_mobile: "40%",
+        isFirst: false
+      },
+      {
+        id: 14,
+        text: "courseFourteen",
+        // image: courseFourteen,
+        date: '2021年',
+        width_pc: "20%",
+        width_mobile: "40%",
+        isFirst: false
+      },
+      {
+        id: 13,
+        text: "courseThirteen",
+        // image: courseThirteen,
+        date: '2021年',
+        width_pc: "20%",
+        width_mobile: "40%",
+        isFirst: false
+      },
+      {
+        id: 12,
+        text: "courseTwelve",
+        // image: courseTwelve,
+        date: '2020年',
+        width_pc: "20%",
+        width_mobile: "40%",
+        isFirst: false
+      },
+      {
+        id: 11,
+        text: "courseEleven",
+        // image: courseEleven,
+        date: '2020年',
+        width_pc: "20%",
+        width_mobile: "40%",
+        isFirst: false
+      },
+      {
+        id: 10,
+        text: "courseTen",
+        // image: courseTen,
+        date: '2020年',
+        width_pc: "20%",
+        width_mobile: "40%",
+        isFirst: false
+      },
+      {
+        id: 9,
+        text: "courseNine",
+        // image: courseNine,
+        date: '2019年',
+        width_pc: "20%",
+        width_mobile: "40%",
+        isFirst: false
+      },
+      {
+        id: 8,
+        text: "courseEight",
+        // image: courseEight,
+        date: '2019年',
+        width_pc: "20%",
+        width_mobile: "40%",
+        isFirst: false
+      },
+      {
         id: 7,
         text: "courseSeven",
         image: courseSeven,
+        date: '2019年',
         width_pc: "20%",
         width_mobile: "40%",
         isFirst: false
@@ -285,6 +371,7 @@ export default {
         id: 6,
         text: "courseSix",
         image: courseSix,
+        date: '2019年',
         width_pc: "20%",
         width_mobile: "40%",
         isFirst: false
@@ -293,6 +380,7 @@ export default {
         id: 5,
         text: "courseFive",
         image: courseFive,
+        date: '2019年',
         width_pc: "30%",
         width_mobile: "60%",
         isFirst: false
@@ -301,6 +389,7 @@ export default {
         id: 4,
         text: "courseFour",
         image: courseFour,
+        date: '2018年',
         width_pc: "30%",
         width_mobile: "60%",
         isFirst: false
@@ -309,6 +398,7 @@ export default {
         id: 3,
         text: "courseThree",
         image: courseThree,
+        date: '2018年',
         width_pc: "30%",
         width_mobile: "60%",
         isFirst: false
@@ -317,6 +407,7 @@ export default {
         id: 2,
         text: "courseTwo",
         image: courseTwo,
+        date: '2018年',
         width_pc: "30%",
         width_mobile: "60%",
         isFirst: false
@@ -325,6 +416,7 @@ export default {
         id: 1,
         text: "courseOne",
         image: courseOne,
+        date: '2017年',
         width_pc: "30%",
         width_mobile: "60%",
         isFirst: true
@@ -370,6 +462,12 @@ export default {
         name: "journeySeven",
         image: journeySeven,
         image_com: journeySeven_com
+      },
+      {
+        id: 8,
+        name: "journeyEight",
+        image: journeyEight,
+        image_com: journeyEight_com
       }],
       contactUsList: [
       {
@@ -428,8 +526,9 @@ export default {
   }
   .exchange {
     width: 100%;
-    background-color: #f9f9f9;
-    padding-top: 30px;
+    // background-color: #f9f9f9;
+    background-color: #ffffff;
+    // padding-top: 30px;
     .head {
       text-align: center;
       color: #3e3e3e;
@@ -442,6 +541,8 @@ export default {
     }
     .body {
       display: flex;
+      height: 460px;
+      align-items: center;
       .content {
         width: 100%;
         text-align: center;
@@ -455,6 +556,7 @@ export default {
           }
         }
         .name {
+          margin-top: 20px;
           color: #222222;
           font-size: 18px;
           font-family: PingFangSC-Regular, PingFang SC;
@@ -462,7 +564,7 @@ export default {
         }
         .text {
           padding: 20px 20%;
-          text-align: left;
+          text-align: center;
           color: #585858;
           font-size: 14px;
           font-family: PingFangSC-Regular, PingFang SC;
@@ -522,9 +624,10 @@ export default {
   }
   .advantage {
     background-color: #f9f9f9;
+    height: 600px;
     .head {
       text-align: center;
-      padding: 30px 0;
+      padding: 60px 0 80px 0;
       font-size: 22px;
       font-family: PingFangSC-Medium, PingFang SC;
       font-weight: 500;
@@ -543,7 +646,7 @@ export default {
           }
         }
         .two {
-          padding: 20px 0;
+          padding: 45px 0 30px 0 ;
           color: #222222;
           font-size: 18px;
           font-family: PingFangSC-Regular, PingFang SC;
@@ -551,8 +654,9 @@ export default {
           text-align: center;
         }
         .three {
-          padding-left: 40%;
-          text-align: left;
+          // padding-left: 40%;
+          padding-bottom: 20px;
+          text-align: center;
           color: #585858;
           font-size: 14px;
           font-family: PingFangSC-Regular, PingFang SC;
@@ -565,7 +669,8 @@ export default {
     background-color: #ffffff;
     .head {
       text-align: center;
-      padding: 30px 0;
+      // padding: 30px 0;
+      padding: 60px 0 40px 0;
       color: #3e3e3e;
       font-size: 22px;
       font-family: PingFangSC-Medium, PingFang SC;
@@ -574,9 +679,9 @@ export default {
     .body {
       display: flex;
       .one {
-        width: 25%;
+        width: 10%;
         text-align: left;
-        padding-left: 10%;
+        padding-left: 25%;
         padding-bottom: 40px;
         padding-top: 0;
       }
@@ -701,6 +806,8 @@ export default {
         }
         .qrCode {
           text-align: left;
+          margin-left: auto;
+          margin-right: 50px;
           .title {
             text-align: center;
             color: #686868;
@@ -758,7 +865,7 @@ export default {
   }
   .exchange {
     width: 100%;
-    background-color: #f9f9f9;
+    background-color: #fff;
     padding: 0.3rem 0;
     .head {
       text-align: center;
@@ -791,7 +898,7 @@ export default {
         }
         .text {
           padding: 0.2rem 10%;
-          text-align: left;
+          text-align: center;
           color: #585858;
           font-size: 0.22rem;
           font-family: PingFangSC-Regular, PingFang SC;
@@ -885,7 +992,7 @@ export default {
           text-align: center;
         }
         .three {
-          padding-left: 30%;
+          padding-left: 15%;
           text-align: left;
           color: #585858;
           font-size: 0.22rem;
@@ -951,7 +1058,7 @@ export default {
     .body {
       padding: 0.1rem 8% 0.4rem;
       display: flex;
-      flex-wrap: wrap-reverse;
+      flex-wrap: wrap;
       .one {
         width: 25%;
         margin: 0 auto;
@@ -1013,6 +1120,7 @@ export default {
       .two {
         padding-top: 0.6rem;
         display: flex;
+        justify-content: space-between;
         .content {
           text-align: left;
           width: 33%;
@@ -1038,6 +1146,7 @@ export default {
       .three {
         display: flex;
         padding-bottom: 0.2rem;
+        justify-content: space-between;
         .value {
           width: 33%;
           font-size: 0.16rem;

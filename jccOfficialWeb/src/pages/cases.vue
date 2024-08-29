@@ -49,21 +49,24 @@
          </div>
       </div>
     </div>
-    <!-- 埃及电子支付 -->
-    <img :src="isEnglish?payment_en:payment" class="img" />
-    <div class="payment">
-        <div class="one" v-for="item in paymentList" :key="item.id">
-          <div class="body" @mouseleave="currentValue='';" @mouseover="setCurrentValue(item.name)" :style="getStyle(item.name,item.isDouble)">
-            <img :src="item.image" class="image" />
+    <!-- 市场监管总局存证验真平台-->
+    <img :src="isEnglish?yanzhen_en:yanzhen" class="img" />
+    <div class="yanzhen">
+        <div class="one" v-for="item in yanzhenList" :key="item.id">
+          <div :class="[item.name,'body']" :style="getStyle(item.name,item.isDouble)">
+            <img class="image" :src="item.image" />
           </div>
         </div>
         <div class="two">
           <div class="body">
-            <div class="contentOne">{{$t("message.home.paymentOne")}}</div>
-            <div class="contentOne">{{$t("message.home.paymentTwo")}}</div>
+            <div class="contentOne">{{$t("message.home.yanzhenOne")}}</div>
          </div>
          <div class="body">
-           <div class="contentTwo">{{$t("message.home.paymentThree")}}</div>
+           <div class="contentTwo">{{$t("message.home.yanzhenTwo")}}</div>
+           <div class="contentTwo">{{$t("message.home.yanzhenThree")}}</div>
+           <!-- <div class="foot">
+                <button @click.stop="goTo()" class="button">{{$t("message.home.integralTwo")}}</button>
+            </div> -->
          </div>
         </div>
     </div>
@@ -108,7 +111,7 @@
                 </div>
             </div>
             <div class="contentThree">
-            <img :src="item.image" class="image" />
+              <img :src="item.image" class="image" />
             </div>
         </div>
        </div>
@@ -125,11 +128,11 @@ import protectionThree from "images/protectionThree.png"
 import protectionFour from "images/protectionFour.png"
 import protectionFive from "images/protectionFive.png"
 import protectionSix from "images/protectionSix.png"
-import payment from "images/payment.png"
-import payment_en from "images/payment_en.png"
-import paymentOne from "images/paymentOne.png"
-import paymentTwo from "images/paymentTwo.png"
-import paymentThree from "images/paymentThree.png"
+import yanzhen from "images/yanzhen.png"
+import yanzhen_en from "images/yanzhen_en.png"
+import yanzhenOne from "images/yanzhenOne.png"
+import yanzhenTwo from "images/yanzhenTwo.png"
+import yanzhenThree from "images/yanzhenThree.png"
 import integral from "images/integral.png"
 import integral_en from "images/integral_en.png"
 import integralOne from "images/integralOne.png"
@@ -152,11 +155,11 @@ export default {
       protectionFour,
       protectionFive,
       protectionSix,
-      payment,
-      payment_en,
-      paymentOne,
-      paymentTwo,
-      paymentThree,
+      yanzhen,
+      yanzhen_en,
+      yanzhenOne,
+      yanzhenTwo,
+      yanzhenThree,
       integral,
       integral_en,
       integralOne,
@@ -185,23 +188,23 @@ export default {
         id: 3,
         text: "advantageThree"
       }],
-      paymentList: [{
+      yanzhenList: [{
         id: 1,
-        image: paymentOne,
+        image: yanzhenOne,
         isDouble: false,
-        name: "paymentOne"
+        name: "yanzhenOne"
       },
       {
         id: 2,
-        image: paymentTwo,
+        image: yanzhenTwo,
         isDouble: true,
-        name: "paymentTwo"
+        name: "yanzhenTwo"
       },
       {
         id: 3,
-        image: paymentThree,
+        image: yanzhenThree,
         isDouble: false,
-        name: "paymentThree"
+        name: "yanzhenThree"
       }],
       integralList: [{
         id: 1,
@@ -228,13 +231,13 @@ export default {
       {
         id: 2,
         title: ["anyMoreFive", "anyMoreSix"],
-        content: ["anyMoreSeven", "anyMoreEight"],
+        content: ["anyMoreSeven"],
         image: anyMoreTwo,
         name: "anyMoreTwo"
       },
       {
         id: 3,
-        title: ["anyMoreNine"],
+        title: ["anyMoreEight", "anyMoreNine"],
         content: ["anyMoreTen"],
         image: anyMoreThree,
         name: "anyMoreThree"
@@ -266,7 +269,7 @@ export default {
       }
       let currentValue = this.currentValue;
       if (currentValue === value) {
-        return "box-shadow:1px 2px 3px 4px #D4D8F5;" + str;
+        return "box-shadow: 4px 4px 18px 4px rgba(225, 225, 225, 1);" + str;
       } else {
         return str;
       }
@@ -280,9 +283,34 @@ export default {
 
 <style lang="scss" scoped>
 .cases_pc {
+  .yanzhenOne {
+    width: 480px;
+    height: 300px;
+  }
+  .yanzhenTwo {
+    width: 360px;
+    height: 237.5px;
+    position: absolute;
+    top: 114px;
+    left: 350px;
+  }
+
+  .yanzhenThree {
+    width: 250px;
+    height: 156.25px;
+    position: absolute;
+    top: 210px;
+    left: 500px;
+}
   .img {
     width: 100%;
     height: 100%;
+  }
+  .protection .left .two {
+    box-shadow: 4px 4px 18px 4px rgba(225, 225, 225, 1);
+  }
+  .protection .right .one {
+    box-shadow: 4px 4px 18px 4px rgba(225, 225, 225, 1);
   }
   .protection {
     display: flex;
@@ -392,10 +420,13 @@ export default {
       }
     }
   }
-  .payment {
+  .yanzhen {
     display: flex;
+    position: relative;
     background-color: #f9f9f9;
-    padding: 40px 10% 50px;
+    padding: 40px 10% 100px;
+    z-index: -1;
+    // height: 400px;
     .one {
       width: 20%;
       margin-right: 20px;
@@ -417,13 +448,34 @@ export default {
           color: #494a53;
           font-size: 22px;
           font-family: PingFangSC-Regular, PingFang SC;
-          font-weight: 400;
+          font-weight: 600;
         }
         .contentTwo {
           color: #494a53;
           font-size: 14px;
           font-family: PingFangSC-Regular, PingFang SC;
           font-weight: 400;
+        }
+        .foot {
+          margin-top: 20px;
+          text-align: left;
+          padding-bottom: 80px;
+          .button {
+            cursor: pointer;
+            // width: 80px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border: none;
+            border-inline: none;
+            outline: none;
+            background-color: #4554ce;
+            border-radius: 4px;
+            color: #ffffff;
+            font-size: 14px;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+          }
         }
       }
     }
@@ -485,6 +537,9 @@ export default {
       }
     }
   }
+  .anyMore .body:hover {
+    scale: 1.03;
+  }
   .anyMore {
     display: flex;
     background-color: #f9f9f9;
@@ -492,8 +547,13 @@ export default {
     .body {
       width: 26%;
       margin-left: 70px;
+      transition: all 0.2s;
+      box-shadow: 4px 4px 18px 4px rgba(225, 225, 225, 1);
       .bodyContent {
         height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
         .content {
           background-color: #ffffff;
           width: 100%;
@@ -539,9 +599,34 @@ export default {
   }
 }
 .cases_mobile {
+  .yanzhenOne {
+    width: 480px;
+    height: 300px;
+  }
+  .yanzhenTwo {
+    width: 360px;
+    height: 237.5px;
+    position: absolute;
+    top: 114px;
+    left: 280px;
+  }
+
+  .yanzhenThree {
+    width: 250px;
+    height: 156.25px;
+    position: absolute;
+    top: 210px;
+    left: 430px;
+  }
   .img {
     width: 100%;
     height: 100%;
+  }
+  .protection .left .two {
+    box-shadow: 4px 4px 18px 4px rgba(225, 225, 225, 1);
+  }
+  .protection .right .one {
+    box-shadow: 4px 4px 18px 4px rgba(225, 225, 225, 1);
   }
   .protection {
     background-color: #f9f9f9;
@@ -559,7 +644,7 @@ export default {
         }
         .two {
           margin-left: 20%;
-          width: 2.6rem;
+          width: 4rem;
           padding: 0 0.3rem 0.5rem;
           background-color: #ffffff;
           text-align: center;
@@ -651,12 +736,14 @@ export default {
       margin-left: 20%;
     }
   }
-  .payment {
+  .yanzhen {
     display: flex;
+    position: relative;
     -webkit-flex-wrap: wrap;
     background-color: #f9f9f9;
     margin-top: -0.3rem;
     padding: 0.7rem 10% 0.5rem;
+    z-index: -1;
     .one {
       width: 33%;
       .body {
@@ -683,17 +770,44 @@ export default {
           font-family: PingFangSC-Regular, PingFang SC;
           font-weight: 400;
         }
+        .foot {
+          margin-top: 20px;
+          text-align: left;
+          padding-bottom: 80px;
+          .button {
+            cursor: pointer;
+            // width: 80px;
+            height: 0.4rem;
+            line-height: 0.3rem;
+            text-align: center;
+            border: none;
+            border-inline: none;
+            outline: none;
+            background-color: #4554ce;
+            border-radius: 4px;
+            color: #ffffff;
+            font-size: 0.2rem;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+          }
+        }
       }
     }
+  }
+  .integral .two:nth-child(2) {
+    scale: 1.15;
   }
   .integral {
     display: flex;
     background-color: #f9f9f9;
     padding: 0 0.3rem 0.5rem;
-
+    justify-content: space-between;
     .two {
-      width: 33%;
-      padding-right: 0.5rem;
+      // &:nth-child(2) {
+      //   scale: 1.15;
+      // }
+      width: 30%;
+      // padding-right: 0.5rem;
       .body {
         .image {
           width: 100%;
@@ -704,7 +818,7 @@ export default {
   }
   .body_mobile {
     .bodyOne {
-      padding: 0.3rem 30% 0.3rem 0.3rem;
+      padding: 0.3rem 10% 0.3rem 10%;;
       background-color: #f9f9f9;
       .title {
         color: #52535b;
@@ -751,6 +865,7 @@ export default {
       margin: 0.3rem 0 0.6rem 20%;
       width: 60%;
       .bodyContent {
+        box-shadow: 4px 4px 18px 4px rgba(225, 225, 225, 1);
         height: 100%;
         .content {
           background-color: #ffffff;

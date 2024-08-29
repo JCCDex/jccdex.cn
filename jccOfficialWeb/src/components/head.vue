@@ -1,8 +1,8 @@
 <template>
-  <div class="commonHead">
-    <div style="width:100%;height:100%;display:flex;align-items:center;">
-      <img :src="logo" style="width: 0.58rem;height:0.52rem;margin:0 0 0 2rem;">
-      <img :src="logoText" style="width: 0.84rem;height: 0.4rem;margin:0 1rem 0 0.15rem;">
+  <div :class="isBigScreen?'commonHead_pc':'commonHead_mobile'">
+    <div class="router">
+      <img :src="logo" class="logo">
+      <img :src="logoText" class="logoText">
       <div @click="selectMenu(item)" v-for="(item,index) in menus" :key="index"
         class="menuBtn commonBtn"
         :style="{'color':currentMenu === item ? '#4554ce' : '#2c2c2c'}">
@@ -27,7 +27,8 @@ export default {
     return {
       logo,
       logoText,
-      menus: ["home", "technology", "cases", "documents"]
+      // menus: ["home", "technology", "cases", "documents"]
+      menus: ["home", "cases", "scheme", "documents"]
     };
   },
   computed: {
@@ -63,7 +64,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.commonHead {
+.commonHead_pc {
+  z-index: 999;
   position: fixed;
   top: 0;
   left: 0;
@@ -74,17 +76,82 @@ export default {
   align-items: center;
   background: #ffffff;
   color: #2c2c2c;
+  .router {
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+  }
+  .logo {
+    width: 0.58rem;
+    height:0.52rem;
+    margin:0 0 0 2rem;
+  }
+
+  .logoText {
+    width: 0.84rem;
+    height: 0.4rem;
+    margin:0 1rem 0 0.15rem;
+  }
+
+  .commonBtn {
+    user-select: none;
+    cursor: pointer;
+  }
+  .menuBtn {
+    margin-left: 1rem;
+    padding: 0.2rem;
+  }
+  .language {
+    padding-right: 1rem;
+    min-width: 1.5rem;
+  }
 }
-.commonBtn {
-  user-select: none;
-  cursor: pointer;
-}
-.menuBtn {
-  margin-left: 1rem;
-  padding: 0.2rem;
-}
-.language {
-  padding-right: 1rem;
-  min-width: 1.5rem;
+
+.commonHead_mobile {
+  z-index: 999;
+  border-bottom: 1px solid rgba(0, 0, 0, .3);
+  font-size: 0.23rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  color: #2c2c2c;
+
+  .router {
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: 0.58rem;
+    height:0.52rem;
+    margin-left: 0.1rem;
+  }
+  .logoText {
+    width: 0.84rem;
+    height: 0.4rem;
+  }
+  .commonBtn {
+    user-select: none;
+    cursor: pointer;
+    min-width: 1rem
+  }
+  .menuBtn {
+    // margin-left: 1rem;
+    // padding: 0.2rem;
+  }
+  .language {
+    // padding-right: 1rem;
+    min-width: 1.5rem;
+  }
 }
 </style>
