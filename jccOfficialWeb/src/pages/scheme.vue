@@ -3,7 +3,8 @@
     <img :src="isEnglish?schemeEn:scheme"  class="img" />
     <!-- 方案介绍 -->
     <div class="scheme">
-      <img :src="building" style="width: 60%;" />
+      <img :src="building" style="width: 35%;" />
+      <p>{{ $t("message.home.building") }}</p>
     </div>
   </div>
 </template>
@@ -44,7 +45,8 @@ export default {
   }
   .scheme {
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 1rem - 260px);
+    margin-top: 2rem;
     background-color: #ffffff;
   }
 }
@@ -57,7 +59,9 @@ export default {
   }
   .scheme {
     width: 100%;
-    height: 100%;
+    margin-top: 3rem;
+    // height: 100%;
+    height: calc(100vh - 4rem - 260px);
     background-color: #ffffff;
   }
 }

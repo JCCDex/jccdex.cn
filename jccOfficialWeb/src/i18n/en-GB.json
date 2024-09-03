@@ -107,8 +107,10 @@
     "advantageTwo": "High technical threshold of blockchain",
     "advantageThree": "Bypass deployment, resource protection, abnormal alarm",
     "yanzhenOne": "CCAI Market Supervision Bureau Deposit Verification Service Platform",
-    "yanzhenTwo": "The certificate storage platform is based on blockchain technology, which cannot be changed after the certificate is stored and chained; the blockchain key is mastered by the user, and the platform does not collect and store the user's key; based on SM2 algorithm fingerprint, the verification can confirm whether the original data has been tampered with;",
-    "yanzhenThree": "Store the cloud picture data to generate two-dimensional code, scan the two-dimensional code to easily view the cloud content.",
+    "yanzhenTwo": "The certificate storage platform is based on blockchain technology, which cannot be changed after the certificate is stored and chained;",
+    "yanzhenThree": "The blockchain key is mastered by the user, and the platform does not collect and store the user's key;",
+    "yanzhenFour": "Based on SM2 algorithm fingerprint, the verification can confirm whether the original data has been tampered with;",
+    "yanzhenFive": "Store the cloud picture data to generate two-dimensional code, scan the two-dimensional code to easily view the cloud content.",
     "integralTilte": "Hainan coconut competition points issuance and exchange platform",
     "integralOne": "Led by China Research Institute of fire coin, Jingchang provides technical support. It is the first point issued in the public chain in China, which is issued in the public chain of Jingtong. It operates and builds the first 'competitive point issuance and exchange platform' in China",
     "integralTwo": "Understanding details",
@@ -121,6 +123,7 @@
     "anyMoreSeven": "Privacy storage tools based on blockchain technology, end-to-end encryption of data, platform can not do evil theft, have private keys to own all secrets.",
     "anyMoreEight": "Heterogeneous Multi-Chain Plugin Wallet",
     "anyMoreNine": "CCDAO Connector",
-    "anyMoreTen": "Supports blockchain networks such as Jingtum Chain, Ripple Chain, EOS Chain and Ethereum. Compatible with various plug-in protocols on the corresponding mainnet, seamless access to various DAPP"
+    "anyMoreTen": "Supports blockchain networks such as Jingtum Chain, Ripple Chain, EOS Chain and Ethereum. Compatible with various plug-in protocols on the corresponding mainnet, seamless access to various DAPP",
+    "building": "The content is under construction, please wait..."
   }
 }

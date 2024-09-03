@@ -52,11 +52,13 @@
     <!-- 市场监管总局存证验真平台-->
     <img :src="isEnglish?yanzhen_en:yanzhen" class="img" />
     <div class="yanzhen">
+      <div style="width: 70%;margin-top:50px;">
         <div class="one" v-for="item in yanzhenList" :key="item.id">
           <div :class="[item.name,'body']" :style="getStyle(item.name,item.isDouble)">
             <img class="image" :src="item.image" />
           </div>
         </div>
+      </div>
         <div class="two">
           <div class="body">
             <div class="contentOne">{{$t("message.home.yanzhenOne")}}</div>
@@ -64,31 +66,33 @@
          <div class="body">
            <div class="contentTwo">{{$t("message.home.yanzhenTwo")}}</div>
            <div class="contentTwo">{{$t("message.home.yanzhenThree")}}</div>
-           <!-- <div class="foot">
-                <button @click.stop="goTo()" class="button">{{$t("message.home.integralTwo")}}</button>
-            </div> -->
+           <div class="contentTwo">{{$t("message.home.yanzhenFour")}}</div>
+           <div class="contentTwo">{{$t("message.home.yanzhenFive")}}</div>
+           <div class="foot">
+                <button @click.stop="goToCcai()" class="button">{{$t("message.home.integralTwo")}}</button>
+            </div>
          </div>
         </div>
     </div>
     <!-- 椰子竞技积分 -->
      <img :src="isEnglish?integral_en:integral" class="img" />
      <div v-if="!isBigScreen" class="body_mobile">
-            <div class="bodyOne">
-               <div class="title">{{$t("message.home.integralTilte")}}</div>
-               <div class="content">{{$t("message.home.integralOne")}}</div>
-               <div class="foot">
-                   <button @click.stop="goTo()" class="button">{{$t("message.home.integralTwo")}}</button>
-               </div>
-            </div> 
-         </div>
+        <div class="bodyOne">
+            <div class="title">{{$t("message.home.integralTilte")}}</div>
+            <div class="content">{{$t("message.home.integralOne")}}</div>
+            <!-- <div class="foot">
+                <button @click.stop="goTo()" class="button">{{$t("message.home.integralTwo")}}</button>
+            </div> -->
+        </div> 
+      </div>
      <div class="integral">
          <div v-if="isBigScreen" class="one">
             <div class="bodyOne">
                <div class="title">{{$t("message.home.integralTilte")}}</div>
                <div class="content">{{$t("message.home.integralOne")}}</div>
-               <div class="foot">
+               <!-- <div class="foot">
                    <button @click.stop="goTo()" class="button">{{$t("message.home.integralTwo")}}</button>
-               </div>
+               </div> -->
             </div> 
          </div>
          <div class="two" v-for="item in integralList" :key="item.id">
@@ -276,6 +280,9 @@ export default {
     },
     goTo() {
       window.open("https://www.cocogc.cn/");
+    },
+    goToCcai() {
+      window.open("https://cabap.ccai.org.cn");
     }
   }
 };
@@ -425,7 +432,7 @@ export default {
     position: relative;
     background-color: #f9f9f9;
     padding: 40px 10% 100px;
-    z-index: -1;
+    // z-index: -1;
     // height: 400px;
     .one {
       width: 20%;
@@ -438,10 +445,10 @@ export default {
       }
     }
     .two {
-      width: 20%;
-      padding: 30px;
+      width: 30%;
+      // padding: 30px;
       .body {
-        width: 260px;
+        // width: 260px;
         padding: 10px;
         text-align: left;
         .contentOne {
@@ -452,7 +459,7 @@ export default {
         }
         .contentTwo {
           color: #494a53;
-          font-size: 14px;
+          font-size: 16px;
           font-family: PingFangSC-Regular, PingFang SC;
           font-weight: 400;
         }
@@ -741,9 +748,9 @@ export default {
     position: relative;
     -webkit-flex-wrap: wrap;
     background-color: #f9f9f9;
-    margin-top: -0.3rem;
+    // margin-top: -0.3rem;
     padding: 0.7rem 10% 0.5rem;
-    z-index: -1;
+    // z-index: -1;
     .one {
       width: 33%;
       .body {
