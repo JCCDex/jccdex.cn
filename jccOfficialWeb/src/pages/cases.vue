@@ -333,7 +333,7 @@ export default {
           text-align: center;
           color: #494a53;
           font-size: 22px;
-          font-family: PingFangSC-Medium, PingFang SC;
+          font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
           font-weight: 500;
           padding-bottom: 30px;
         }
@@ -352,7 +352,7 @@ export default {
             .title {
               color: #222222;
               font-size: 18px;
-              font-family: PingFangSC-Regular, PingFang SC;
+              font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
               font-weight: 400;
               padding-bottom: 20px;
             }
@@ -372,7 +372,7 @@ export default {
               text-align: left;
               color: #585858;
               font-size: 14px;
-              font-family: PingFangSC-Regular, PingFang SC;
+              font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
               font-weight: 400;
             }
           }
@@ -398,7 +398,7 @@ export default {
           .title {
             color: #222222;
             font-size: 18px;
-            font-family: PingFangSC-Regular, PingFang SC;
+            font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
             font-weight: 400;
             padding-bottom: 20px;
           }
@@ -420,7 +420,7 @@ export default {
           .content {
             color: #585858;
             font-size: 14px;
-            font-family: PingFangSC-Regular, PingFang SC;
+            font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
             font-weight: 400;
           }
         }
@@ -454,13 +454,13 @@ export default {
         .contentOne {
           color: #494a53;
           font-size: 22px;
-          font-family: PingFangSC-Regular, PingFang SC;
+          font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
           font-weight: 600;
         }
         .contentTwo {
           color: #494a53;
           font-size: 16px;
-          font-family: PingFangSC-Regular, PingFang SC;
+          font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
           font-weight: 400;
         }
         .foot {
@@ -480,7 +480,7 @@ export default {
             border-radius: 4px;
             color: #ffffff;
             font-size: 14px;
-            font-family: PingFangSC-Regular, PingFang SC;
+            font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
             font-weight: 400;
           }
         }
@@ -498,7 +498,7 @@ export default {
           color: #52535b;
           text-align: left;
           font-size: 22px;
-          font-family: PingFangSC-Semibold, PingFang SC;
+          font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
           font-weight: 600;
           padding-bottom: 30px;
         }
@@ -506,7 +506,7 @@ export default {
           color: #52535b;
           text-align: left;
           font-size: 16px;
-          font-family: PingFangSC-Regular, PingFang SC;
+          font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
           font-weight: 400;
           padding-bottom: 50px;
         }
@@ -526,7 +526,7 @@ export default {
             border-radius: 4px;
             color: #ffffff;
             font-size: 14px;
-            font-family: PingFangSC-Regular, PingFang SC;
+            font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
             font-weight: 400;
           }
         }
@@ -574,7 +574,7 @@ export default {
               padding-bottom: 5px;
               color: #222222;
               font-size: 18px;
-              font-family: STYuanti-SC-Regular, STYuanti-SC;
+              font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
               font-weight: 400;
             }
           }
@@ -589,7 +589,7 @@ export default {
               padding: 0 10px 20px 0;
               color: #585858;
               font-size: 14px;
-              font-family: PingFangSC-Regular, PingFang SC;
+              font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
               font-weight: 400;
             }
           }
@@ -645,7 +645,7 @@ export default {
           text-align: center;
           color: #494a53;
           font-size: 0.28rem;
-          font-family: PingFangSC-Medium, PingFang SC;
+          font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
           font-weight: 500;
           padding-bottom: 0.3rem;
         }
@@ -665,7 +665,7 @@ export default {
             .title {
               color: #222222;
               font-size: 0.26rem;
-              font-family: PingFangSC-Regular, PingFang SC;
+              font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
               font-weight: 400;
               padding-bottom: 0.2rem;
             }
@@ -685,7 +685,7 @@ export default {
               text-align: left;
               color: #585858;
               font-size: 0.22rem;
-              font-family: PingFangSC-Regular, PingFang SC;
+              font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
               font-weight: 400;
             }
           }
@@ -710,7 +710,7 @@ export default {
           .title {
             color: #222222;
             font-size: 0.26rem;
-            font-family: PingFangSC-Regular, PingFang SC;
+            font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
             font-weight: 400;
             padding-bottom: 0.2rem;
           }
@@ -733,7 +733,7 @@ export default {
           .content {
             color: #585858;
             font-size: 0.22rem;
-            font-family: PingFangSC-Regular, PingFang SC;
+            font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
             font-weight: 400;
           }
         }
@@ -768,13 +768,13 @@ export default {
         .contentOne {
           color: #494a53;
           font-size: 0.28rem;
-          font-family: PingFangSC-Regular, PingFang SC;
+          font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
           font-weight: 400;
         }
         .contentTwo {
           color: #494a53;
           font-size: 0.22rem;
-          font-family: PingFangSC-Regular, PingFang SC;
+          font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
           font-weight: 400;
         }
         .foot {
@@ -794,7 +794,7 @@ export default {
             border-radius: 4px;
             color: #ffffff;
             font-size: 0.2rem;
-            font-family: PingFangSC-Regular, PingFang SC;
+            font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
             font-weight: 400;
           }
         }
@@ -831,7 +831,7 @@ export default {
         color: #52535b;
         text-align: left;
         font-size: 0.28rem;
-        font-family: PingFangSC-Semibold, PingFang SC;
+        font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
         font-weight: 600;
         padding-bottom: 0.3rem;
       }
@@ -839,7 +839,7 @@ export default {
         color: #52535b;
         text-align: left;
         font-size: 0.24rem;
-        font-family: PingFangSC-Regular, PingFang SC;
+        font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
         font-weight: 400;
         padding-bottom: 0.5rem;
       }
@@ -859,7 +859,7 @@ export default {
           border-radius: 0.04rem;
           color: #ffffff;
           font-size: 0.2rem;
-          font-family: PingFangSC-Regular, PingFang SC;
+          font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
           font-weight: 400;
         }
       }
@@ -887,7 +887,7 @@ export default {
               padding-bottom: 5px;
               color: #222222;
               font-size: 0.26rem;
-              font-family: STYuanti-SC-Regular, STYuanti-SC;
+              font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
               font-weight: 400;
             }
           }
@@ -902,7 +902,7 @@ export default {
               padding: 0 0.1rem 0.2rem 0;
               color: #585858;
               font-size: 0.22rem;
-              font-family: PingFangSC-Regular, PingFang SC;
+              font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
               font-weight: 400;
             }
           }

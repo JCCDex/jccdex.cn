@@ -66,7 +66,7 @@ export default {
   .body {
     color: #999999;
     font-size: 0.2rem;
-    font-family: PingFangSC-Regular, PingFang SC;
+    font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
     font-weight: 400;
     padding: 0.05rem 0;
     user-select: none;

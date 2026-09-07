@@ -123,7 +123,7 @@ export default {
           padding: 5px 20px 0 20px;
           color: #494a53;
           font-size: 14px;
-          font-family: PingFangSC-Medium, PingFang SC;
+          font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
           font-weight: 500;
         }
       }
@@ -155,7 +155,7 @@ export default {
       .one {
         color: #494a53;
         font-size: 14px;
-        font-family: PingFangSC-Regular, PingFang SC;
+        font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
         font-weight: 400;
         padding-bottom: 3%;
       }
@@ -173,7 +173,7 @@ export default {
         padding-top: 20%;
         color: #494a53;
         font-size: 14px;
-        font-family: PingFangSC-Regular, PingFang SC;
+        font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
         font-weight: 400;
       }
       .two {
@@ -182,7 +182,7 @@ export default {
         padding-top: 10%;
         color: #494a53;
         font-size: 14px;
-        font-family: PingFangSC-Regular, PingFang SC;
+        font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
         font-weight: 400;
       }
     }
@@ -212,14 +212,14 @@ export default {
         padding-top: 10%;
         text-align: left;
         color: #494a53;
-        font-family: PingFangSC-Regular, PingFang SC;
+        font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
         font-weight: 400;
       }
       .two {
         padding-top: 5%;
         text-align: left;
         color: #494a53;
-        font-family: PingFangSC-Regular, PingFang SC;
+        font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
         font-weight: 400;
       }
     }
@@ -241,7 +241,7 @@ export default {
           text-align: left;
           color: #494a53;
           font-size: 0.22rem;
-          font-family: PingFangSC-Medium, PingFang SC;
+          font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
           font-weight: 500;
         }
       }
@@ -272,7 +272,7 @@ export default {
         text-align: left;
         color: #494a53;
         font-size: 0.22rem;
-        font-family: PingFangSC-Regular, PingFang SC;
+        font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
         font-weight: 400;
       }
     }
@@ -286,7 +286,7 @@ export default {
         padding: 0.2rem 0.3rem 0.1rem;
         color: #494a53;
         font-size: 0.22rem;
-        font-family: PingFangSC-Regular, PingFang SC;
+        font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
         font-weight: 400;
       }
       .two {
@@ -294,7 +294,7 @@ export default {
         text-align: left;
         color: #494a53;
         font-size: 0.22rem;
-        font-family: PingFangSC-Regular, PingFang SC;
+        font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
         font-weight: 400;
       }
     }
@@ -320,14 +320,14 @@ export default {
         padding: 0.05rem 0.3rem;
         text-align: left;
         color: #494a53;
-        font-family: PingFangSC-Regular, PingFang SC;
+        font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
         font-weight: 400;
       }
       .two {
         padding: 0.05rem 0.3rem;
         text-align: left;
         color: #494a53;
-        font-family: PingFangSC-Regular, PingFang SC;
+        font-family: "Source Han Sans SC", "Noto Sans SC", sans-serif;
         font-weight: 400;
       }
     }

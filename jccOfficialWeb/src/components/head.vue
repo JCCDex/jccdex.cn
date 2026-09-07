@@ -19,7 +19,7 @@
 
 <script>
 import logo from "images/logo.png";
-import logoText from "images/logoText.png";
+import logoText from "images/logoText.svg";
 var homeTitle = document.getElementById("homepage_title");
 export default {
   name: "commonHead",
@@ -89,8 +89,7 @@ export default {
   }
 
   .logoText {
-    width: 0.84rem;
-    height: 0.4rem;
+    width: 1rem;
     margin:0 1rem 0 0.15rem;
   }
 
