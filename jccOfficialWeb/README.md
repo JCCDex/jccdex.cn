@@ -1,4 +1,5 @@
 # jcc_official_web
+node version 20.16.0
 
 > A Vue.js project
 
